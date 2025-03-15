@@ -1399,6 +1399,8 @@ cdef class MatGSO:
             return bool(self._core.mpz_mpfr.update_gso_row(i, last_j))
 
         if self._type == mat_gso_long_d:
+            # print("111111111111111")
+            # 一般执行这里
             return bool(self._core.long_d.update_gso_row(i, last_j))
         IF HAVE_LONG_DOUBLE:
             if self._type == mat_gso_long_ld:
